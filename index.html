@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>Code Girls Materials: Hello, Javascript</title>
+  </head>
+
+  <style>
+    body { padding: 3rem; max-width: 960px; margin: 0 auto; }
+    div { background: silver; padding: 1.5rem; }
+    h1 { margin-bottom: 4.5rem; }
+  </style>
+
+  <body>
+    <h1>Hello, Javascript!</h1>
+
+    <h2>JavaScript understands numbers:</h2>
+    <div class="js-numbers"></div>
+    <script type="text/javascript">
+      document.querySelector('.js-numbers').innerText = 3.141592653589793;
+    </script>
+
+    <h2>JavaScript is a calculator:</h2>
+    <div class="js-calculator"></div>
+    <script type="text/javascript">
+      document.querySelector('.js-calculator').innerText = 2 / 4;
+    </script>
+
+    <h2>Counting:</h2>
+    <div class="js-count"></div>
+    <script type="text/javascript">
+      let count = 3;
+
+      count = 7;
+      count = count + 1;
+
+      document.querySelector('.js-count').innerText = count;
+    </script>
+
+    <h2>Functions:</h2>
+    <div class="js-function"></div>
+    <script type="text/javascript">
+      let count2 = 0;
+
+      incrementCount = () => {
+        count2 = count2 + 1;
+      }
+
+      incrementCount();
+      document.querySelector('.js-function').innerText = count2;
+      incrementCount();
+      incrementCount();
+      document.querySelector('.js-function').innerText += ` ${count2}`;
+      incrementCount();
+      incrementCount();
+      incrementCount();
+      document.querySelector('.js-function').innerText += ` ${count2}`;
+    </script>
+
+    <h2>Return values:</h2>
+    <div class="js-return"></div>
+    <script type="text/javascript">
+      let count3 = 0;
+
+      incrementCount = () => {
+        count3 = count3 + 1;
+        return count3;
+      }
+
+      document.querySelector('.js-return').innerText = incrementCount();
+      document.querySelector('.js-return').innerText += ` ${incrementCount()}`;
+      document.querySelector('.js-return').innerText += ` ${incrementCount()}`;
+    </script>
+
+    <h2>for-loop:</h2>
+    <div class="js-loop"></div>
+    <script type="text/javascript">
+      for (let count4 = 0; count4 < 10; count4 += 1) {
+        document.querySelector('.js-loop').innerText += ` ${count4}`;
+      }
+    </script>
+
+  </body>
+</html>
